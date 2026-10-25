@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Harsh Gallery</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header class="topbar">
+		<h1>📸 Harsh Gallery</h1>
+		<button id="themeBtn">🌙 Dark Mode</button>
+	</header>
+
+	<nav class="toolbar">
+		<button data-view="gallery">All Photos</button>
+		<button data-view="albums">Albums</button>
+		<button data-view="favorites">❤️ Favorites</button>
+		<button data-view="trash">🗑 Recently Deleted</button>
+	</nav>
+
+	<main>
+		<section class="controls">
+			<input id="search" type="search" placeholder="Search photos...">
+
+			<select id="sort">
+				<option value="newest">Newest first</option>
+				<option value="oldest">Oldest first</option>
+				<option value="name">Name A–Z</option>
+			</select>
+
+			<label class="upload">
+				+ Add Photos
+				<input id="fileInput" type="file" accept="image/*" multiple hidden>
+			</label>
+		</section>
+
+		<h2 id="heading">All Photos</h2>
+		<p id="count">0 photos</p>
+		<section id="photoGrid" class="grid"></section>
+        <button id="createAlbumBtn" hidden>+ Create Album</button>
+        <section id="albumsSection" class="grid" hidden></section>
+	</main>
+
+	<script src="script.js"></script>
+</body>
+</html>
+
